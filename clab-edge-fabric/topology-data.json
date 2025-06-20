@@ -1,0 +1,204 @@
+{
+  "name": "edge-fabric",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-411aa273f14e",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAIcNOlxj3tBp4s8eMLSxEtfKYijQtBtCBnrEoTWnTZ5"],
+  "nodes": {
+    "leaf1": {
+      "index": "0",
+      "shortname": "leaf1",
+      "longname": "clab-edge-fabric-leaf1",
+      "fqdn": "leaf1.edge-fabric.io",
+      "group": "",
+      "labdir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/leaf1",
+      "kind": "linux",
+      "image": "quay.io/frrouting/frr:10.3.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.21",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-411aa273f14e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/leaf1",
+        "clab-node-longname": "clab-edge-fabric-leaf1",
+        "clab-node-name": "leaf1",
+        "clab-node-type": "",
+        "clab-owner": "mohamaibe",
+        "clab-topo-file": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab.yml",
+        "containerlab": "edge-fabric"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf2": {
+      "index": "1",
+      "shortname": "leaf2",
+      "longname": "clab-edge-fabric-leaf2",
+      "fqdn": "leaf2.edge-fabric.io",
+      "group": "",
+      "labdir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/leaf2",
+      "kind": "linux",
+      "image": "quay.io/frrouting/frr:10.3.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.22",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-411aa273f14e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/leaf2",
+        "clab-node-longname": "clab-edge-fabric-leaf2",
+        "clab-node-name": "leaf2",
+        "clab-node-type": "",
+        "clab-owner": "mohamaibe",
+        "clab-topo-file": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab.yml",
+        "containerlab": "edge-fabric"
+      },
+      "port-bindings": [
+      ]
+    },
+    "srl1": {
+      "index": "2",
+      "shortname": "srl1",
+      "longname": "clab-edge-fabric-srl1",
+      "fqdn": "srl1.edge-fabric.io",
+      "group": "",
+      "labdir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/srl1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:25.3.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:1b:02:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-411aa273f14e",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/srl1",
+        "clab-node-longname": "clab-edge-fabric-srl1",
+        "clab-node-name": "srl1",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "mohamaibe",
+        "clab-topo-file": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab.yml",
+        "containerlab": "edge-fabric"
+      },
+      "port-bindings": [
+      ]
+    },
+    "srl2": {
+      "index": "3",
+      "shortname": "srl2",
+      "longname": "clab-edge-fabric-srl2",
+      "fqdn": "srl2.edge-fabric.io",
+      "group": "",
+      "labdir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/srl2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:25.3.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:ed:03:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-411aa273f14e",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/srl2",
+        "clab-node-longname": "clab-edge-fabric-srl2",
+        "clab-node-name": "srl2",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "mohamaibe",
+        "clab-topo-file": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab.yml",
+        "containerlab": "edge-fabric"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "srl1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:3d:20:68",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9c:5a:55",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:ce:89:aa",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:83:bf:aa",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:e5:14:0e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:98:d1:fd",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl2",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:43:ce:fe",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:9b:9a:03",
+        "peer": "a"
+      }
+    }
+  ]
+}

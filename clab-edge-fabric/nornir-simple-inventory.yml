@@ -1,0 +1,21 @@
+---
+leaf1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.21
+leaf2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.22
+srl1:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.11
+srl2:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.12
