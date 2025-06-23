@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-411aa273f14e",
+        "bridge": "br-8acbb978f27c",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "3fff:172:20:20::/64",
@@ -35,7 +35,7 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-411aa273f14e",
+        "clab-mgmt-net-bridge": "br-8acbb978f27c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/leaf1",
@@ -62,11 +62,11 @@
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.20.20.22",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-411aa273f14e",
+        "clab-mgmt-net-bridge": "br-8acbb978f27c",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/leaf2",
@@ -95,9 +95,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "3fff:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "1a:1b:02:00:00:00",
+      "mac-address": "1a:50:02:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-411aa273f14e",
+        "clab-mgmt-net-bridge": "br-8acbb978f27c",
         "clab-node-group": "",
         "clab-node-kind": "srl",
         "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/srl1",
@@ -124,11 +124,11 @@
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.20.20.12",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "1a:ed:03:00:00:00",
+      "mac-address": "1a:c6:03:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-411aa273f14e",
+        "clab-mgmt-net-bridge": "br-8acbb978f27c",
         "clab-node-group": "",
         "clab-node-kind": "srl",
         "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/srl2",
@@ -148,13 +148,13 @@
       "a": {
         "node": "srl1",
         "interface": "e1-1",
-        "mac": "aa:c1:ab:3d:20:68",
+        "mac": "aa:c1:ab:cf:14:6c",
         "peer": "z"
       },
       "z": {
         "node": "leaf1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:9c:5a:55",
+        "mac": "aa:c1:ab:4f:b8:53",
         "peer": "a"
       }
     },
@@ -162,13 +162,13 @@
       "a": {
         "node": "srl1",
         "interface": "e1-2",
-        "mac": "aa:c1:ab:ce:89:aa",
+        "mac": "aa:c1:ab:03:16:32",
         "peer": "z"
       },
       "z": {
         "node": "leaf2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:83:bf:aa",
+        "mac": "aa:c1:ab:02:e5:bd",
         "peer": "a"
       }
     },
@@ -176,13 +176,13 @@
       "a": {
         "node": "srl2",
         "interface": "e1-1",
-        "mac": "aa:c1:ab:e5:14:0e",
+        "mac": "aa:c1:ab:fb:28:29",
         "peer": "z"
       },
       "z": {
         "node": "leaf1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:98:d1:fd",
+        "mac": "aa:c1:ab:88:20:ec",
         "peer": "a"
       }
     },
@@ -190,13 +190,13 @@
       "a": {
         "node": "srl2",
         "interface": "e1-2",
-        "mac": "aa:c1:ab:43:ce:fe",
+        "mac": "aa:c1:ab:93:0a:82",
         "peer": "z"
       },
       "z": {
         "node": "leaf2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:9b:9a:03",
+        "mac": "aa:c1:ab:64:db:39",
         "peer": "a"
       }
     }

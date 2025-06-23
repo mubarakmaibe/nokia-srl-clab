@@ -1,0 +1,23 @@
+{
+  "interface": {
+    "ethernet-1/1": {
+      "subinterface": {
+        "0": {
+          "ipv4": {
+            "address": ["10.10.3.2/30"]
+          }
+        }
+      }
+    },
+    "ethernet-1/2": {
+      "subinterface": {
+        "0": {
+          "ipv4": {
+            "address": ["10.10.4.2/30"]
+          }
+        }
+      }
+    }
+  }
+}
+    

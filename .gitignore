@@ -6,3 +6,4 @@ configs/**/startup-config.conf
 clab-edge-fabric/**/aaamgr_local_user.json
 clab-edge-fabric/*/config/*.json
 clab-edge-fabric/*/startup-config.conf
+**/aaamgr_local_user.json
