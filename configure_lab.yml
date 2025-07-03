@@ -1,0 +1,78 @@
+---
+- name: Wait for devices to become ready
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Wait for connection
+      ansible.builtin.wait_for_connection:
+        delay: 10
+        timeout: 300
+
+- name: Configure SR Linux Nodes
+  hosts: srl_nodes
+  gather_facts: false
+  tasks:
+    - name: Apply base SR Linux configuration
+      ansible.netcommon.grpc_config:
+        config:
+          # Configure system details
+          system:
+            information:
+              description: "Configured by Ansible"
+          
+          # Configure loopback interface
+          interface:
+            - name: system0
+              subinterface:
+                - index: 0
+                  admin-state: enable
+                  ipv4:
+                    address:
+                      - ip-prefix: "{{ router_id }}/32"
+          
+          # Configure BGP
+          network-instance:
+            - name: default
+              protocols:
+                bgp:
+                  admin-state: enable
+                  router-id: "{{ router_id }}"
+                  autonomous-system: "{{ asn }}"
+
+    - name: Configure additional interfaces
+      ansible.netcommon.grpc_config:
+        config:
+          interface:
+            - name: "{{ item.name }}"
+              description: "{{ item.description | default(omit) }}"
+              subinterface:
+                - index: 0
+                  admin-state: enable
+                  ipv4:
+                    address:
+                      - ip-prefix: "{{ item.ip_address }}"
+      loop: "{{ interfaces | default([]) }}"
+      when: interfaces is defined
+
+- name: Configure FRR Nodes
+  hosts: frr_nodes
+  gather_facts: false
+  vars:
+    ansible_connection: ansible.netcommon.network_cli
+  tasks:
+    - name: Generate FRR configuration
+      set_fact:
+        frr_config: |
+          router bgp {{ asn }}
+            bgp router-id {{ router_id }}
+          {% for neighbor in bgp_neighbors | default([]) %}
+            neighbor {{ neighbor.ip }} remote-as {{ neighbor.remote_as }}
+          {% endfor %}
+          {% for iface in interfaces | default([]) %}
+          interface {{ iface.name }}
+            ip address {{ iface.ip_address }}
+          {% endfor %}
+
+    - name: Apply base FRR configuration
+      ansible.netcommon.cli_config:
+        config: "{{ frr_config }}"

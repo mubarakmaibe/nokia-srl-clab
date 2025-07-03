@@ -1,0 +1,6 @@
+{
+    // Tell the Ansible extension to use the Python interpreter from our virtual environment
+    "ansible.python.interpreterPath": "/usr/bin/python3",
+    // Enables autocompletion and validation based on your installed collections
+    "ansible.validation.enabled": true
+}

@@ -6,13 +6,11 @@ topology:
       kind: srl
       image: ghcr.io/nokia/srlinux:25.3.2
       mgmt-ipv4: 172.20.20.11
-      startup-config: configs/srl1/config.json
 
     srl2:
       kind: srl
       image: ghcr.io/nokia/srlinux:25.3.2
       mgmt-ipv4: 172.20.20.12
-      startup-config: configs/srl2/config.json
 
     leaf1:
       kind: linux
@@ -21,9 +19,7 @@ topology:
       exec:
         - sysctl -w net.ipv4.ip_forward=1
       binds:
-        - ./configs/leaf1/frr.conf:/etc/frr/frr.conf
         - ./configs/leaf1/daemons:/etc/frr/daemons
-        - ./configs/leaf1/vtysh.conf:/etc/frr/vtysh.conf
 
     leaf2:
       kind: linux
@@ -32,9 +28,7 @@ topology:
       exec:
         - sysctl -w net.ipv4.ip_forward=1
       binds:
-        - ./configs/leaf2/frr.conf:/etc/frr/frr.conf
         - ./configs/leaf2/daemons:/etc/frr/daemons
-        - ./configs/leaf2/vtysh.conf:/etc/frr/vtysh.conf
 
   links:
     - endpoints: ["srl1:ethernet-1/1", "leaf1:eth1"]

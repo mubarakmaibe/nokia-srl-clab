@@ -1,0 +1,23 @@
+---
+srl_nodes:
+  hosts:
+    srl1:
+      ansible_host: 172.20.20.11
+    srl2:
+      ansible_host: 172.20.20.12
+  vars:
+    ansible_user: admin
+    ansible_password: admin
+    ansible_network_os: nokia.srlinux.srlinux
+    ansible_connection: ansible.netcommon.grpc
+
+frr_nodes:
+  hosts:
+    leaf1:
+      ansible_host: 172.20.20.21
+    leaf2:
+      ansible_host: 172.20.20.22
+  vars:
+    ansible_user: root
+    ansible_ssh_pass: frr
+    ansible_network_os: frr

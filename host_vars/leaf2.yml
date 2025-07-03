@@ -1,0 +1,13 @@
+---
+router_id: "4.4.4.4"
+asn: 65002
+interfaces:
+  - name: "eth1"
+    ip_address: "10.0.3.2/30"
+  - name: "eth2"
+    ip_address: "10.0.4.2/30"
+bgp_neighbors:
+  - ip: "10.0.3.1"
+    remote_as: 65000
+  - ip: "10.0.4.1"
+    remote_as: 65000

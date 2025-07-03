@@ -1,0 +1,15 @@
+---
+router_id: "2.2.2.2"
+asn: 65000
+interfaces:
+  - name: "ethernet-1/1"
+    ip_address: "10.0.2.1/30"
+    description: "Link to leaf1"
+  - name: "ethernet-1/2"
+    ip_address: "10.0.4.1/30"
+    description: "Link to leaf2"
+bgp_neighbors:
+  - ip: "10.0.2.2"
+    remote_as: 65001
+  - ip: "10.0.4.2"
+    remote_as: 65002

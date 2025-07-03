@@ -1,0 +1,13 @@
+---
+router_id: "3.3.3.3"
+asn: 65001
+interfaces:
+  - name: "eth1"
+    ip_address: "10.0.1.2/30"
+  - name: "eth2"
+    ip_address: "10.0.2.2/30"
+bgp_neighbors:
+  - ip: "10.0.1.1"
+    remote_as: 65000
+  - ip: "10.0.2.1"
+    remote_as: 65000

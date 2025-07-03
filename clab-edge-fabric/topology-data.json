@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-8acbb978f27c",
+        "bridge": "br-34b98abf59af",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "3fff:172:20:20::/64",
@@ -31,11 +31,11 @@
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.20.20.21",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8acbb978f27c",
+        "clab-mgmt-net-bridge": "br-34b98abf59af",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/leaf1",
@@ -62,11 +62,11 @@
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.20.20.22",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8acbb978f27c",
+        "clab-mgmt-net-bridge": "br-34b98abf59af",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/leaf2",
@@ -95,9 +95,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "3fff:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "1a:50:02:00:00:00",
+      "mac-address": "1a:ec:02:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8acbb978f27c",
+        "clab-mgmt-net-bridge": "br-34b98abf59af",
         "clab-node-group": "",
         "clab-node-kind": "srl",
         "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/srl1",
@@ -124,11 +124,11 @@
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.20.20.12",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "1a:c6:03:00:00:00",
+      "mac-address": "1a:16:03:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8acbb978f27c",
+        "clab-mgmt-net-bridge": "br-34b98abf59af",
         "clab-node-group": "",
         "clab-node-kind": "srl",
         "clab-node-lab-dir": "/home/mohamaibe/projects/netdevops-edge-fabric/lab/clab-fabric/clab-edge-fabric/srl2",
@@ -148,13 +148,13 @@
       "a": {
         "node": "srl1",
         "interface": "e1-1",
-        "mac": "aa:c1:ab:cf:14:6c",
+        "mac": "aa:c1:ab:4d:f2:ff",
         "peer": "z"
       },
       "z": {
         "node": "leaf1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:4f:b8:53",
+        "mac": "aa:c1:ab:7f:34:7c",
         "peer": "a"
       }
     },
@@ -162,13 +162,13 @@
       "a": {
         "node": "srl1",
         "interface": "e1-2",
-        "mac": "aa:c1:ab:03:16:32",
+        "mac": "aa:c1:ab:74:9f:60",
         "peer": "z"
       },
       "z": {
         "node": "leaf2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:02:e5:bd",
+        "mac": "aa:c1:ab:b1:1d:17",
         "peer": "a"
       }
     },
@@ -176,13 +176,13 @@
       "a": {
         "node": "srl2",
         "interface": "e1-1",
-        "mac": "aa:c1:ab:fb:28:29",
+        "mac": "aa:c1:ab:7a:74:6e",
         "peer": "z"
       },
       "z": {
         "node": "leaf1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:88:20:ec",
+        "mac": "aa:c1:ab:79:e4:ac",
         "peer": "a"
       }
     },
@@ -190,13 +190,13 @@
       "a": {
         "node": "srl2",
         "interface": "e1-2",
-        "mac": "aa:c1:ab:93:0a:82",
+        "mac": "aa:c1:ab:96:26:84",
         "peer": "z"
       },
       "z": {
         "node": "leaf2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:64:db:39",
+        "mac": "aa:c1:ab:dc:0c:61",
         "peer": "a"
       }
     }

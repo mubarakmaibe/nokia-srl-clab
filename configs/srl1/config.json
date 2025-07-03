@@ -3,6 +3,7 @@
     "ethernet-1/1": {
       "proxy-arp": true,
       "admin-state": "enable",
+      "network-instance": "default",
       "subinterface": {
         "0": {
           "ipv4": {
@@ -14,6 +15,7 @@
     "ethernet-1/2": {
       "proxy-arp": true,
       "admin-state": "enable",
+      "network-instance": "default",
       "subinterface": {
         "0": {
           "ipv4": {
@@ -22,31 +24,31 @@
         }
       }
     }
-},
-"network-instance": {
-  "default": {
-    "protocols": {
-      "static": {
-        "route": [
-          {
-            "prefix": "1.1.1.1/32",
-            "next-hop": [
-              {
-                "next-hop-address": "10.10.1.1"
-              }
-            ]
-          },
-          {
-            "prefix": "2.2.2.2/32",
-            "next-hop": [
-              {
-                "next-hop-address": "10.10.2.1"
-              }
-            ]
-          }
-        ]
+  },
+  "network-instance": {
+    "default": {
+      "protocols": {
+        "static": {
+          "route": [
+            {
+              "prefix": "1.1.1.1/32",
+              "next-hop": [
+                {
+                  "next-hop-address": "10.10.1.1"
+                }
+              ]
+            },
+            {
+              "prefix": "2.2.2.2/32",
+              "next-hop": [
+                {
+                  "next-hop-address": "10.10.2.1"
+                }
+              ]
+            }
+          ]
+        }
       }
     }
   }
-}
 }
